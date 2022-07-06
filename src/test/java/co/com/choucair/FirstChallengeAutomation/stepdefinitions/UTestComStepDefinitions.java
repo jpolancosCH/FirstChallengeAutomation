@@ -11,6 +11,8 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
+import java.io.IOException;
+
 public class UTestComStepDefinitions {
 
     @Before
@@ -24,7 +26,7 @@ public class UTestComStepDefinitions {
     }
 
     @When("^he complete the four parts of the register$")
-    public void heCompleteTheFourPartsOfTheRegister() {
+    public void heCompleteTheFourPartsOfTheRegister() throws IOException {
         OnStage.theActorInTheSpotlight().attemptsTo(FullStep1.complete(),(FullStep2.complete()),(FullStep3.complete()),(FullStep4.complete()));
     }
 
